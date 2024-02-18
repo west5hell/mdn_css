@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinators</title>
+
+    <style>
+      .box p {
+        color: red;
+      }
+
+      ul > li {
+        border-top: 5px solid red;
+      }
+
+      h1 ~ p {
+        font-weight: bold;
+        background-color: #333;
+        color: #fff;
+        padding: 0.5em;
+      }
+
+      h1 + p::first-letter {
+        font-size: 200%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <p>Text in .box</p>
+      <p>Text also in .box</p>
+    </div>
+    <p>Text not in .box</p>
+
+    <ul>
+      <li>Unordered item</li>
+      <li>
+        Unordered item
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2</li>
+        </ol>
+      </li>
+      <li>Unordered item</li>
+    </ul>
+
+    <article>
+      <p>Above heading</p>
+
+      <h1>A heading</h1>
+
+      <p>
+        Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+        onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+      </p>
+
+      <div>I am a div.</div>
+
+      <p>
+        Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
+        courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+        wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+      </p>
+    </article>
+  </body>
+</html>
