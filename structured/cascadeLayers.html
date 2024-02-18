@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascade layers</title>
+
+    <style>
+      :where(a.author) {
+        text-decoration: overline;
+        color: red;
+      }
+
+      /* @layer site, page; */
+
+      @media (min-width: 50em) {
+        @layer site;
+      }
+
+      @layer page {
+        h1 {
+          text-decoration: overline;
+          color: red;
+        }
+      }
+
+      @layer site {
+        h1 {
+          text-decoration: underline;
+          color: green;
+        }
+      }
+
+      /* @layer site, page; */
+    </style>
+  </head>
+  <body>
+    <h1>Is this heading underlined?</h1>
+
+    <p><a href="https://example.org">User agent styles</a></p>
+    <p><a href="https://example.org" class="author">Author styles</a></p>
+  </body>
+</html>
