@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The box model</title>
+
+    <style>
+      .box {
+        border: 5px solid rebeccapurple;
+        background-color: lightgray;
+        padding: 40px;
+        margin: 40px;
+        width: 300px;
+        height: 150px;
+      }
+
+      .alternate {
+        box-sizing: border-box;
+      }
+
+      span {
+        display: inline-block;
+        margin: 20px;
+        padding: 20px;
+        width: 80px;
+        height: 50px;
+        background-color: lightblue;
+        border: 2px solid blue;
+      }
+
+      .links-list a {
+        background-color: rgb(179, 57, 81);
+        color: #fff;
+        text-decoration: none;
+        padding: 1em 2em;
+        display: inline-block;
+      }
+
+      .links-list a:hover {
+        background-color: rgb(66, 28, 40);
+        color: #fff;
+      }
+
+      ul {
+        display: inline-flex;
+        list-style: none;
+      }
+
+      li {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">I use the standard box model.</div>
+    <div class="box alternate">I use the alternate box model.</div>
+
+    <p>
+      I am a paragraph and this is a <span>span</span> inside that paragraph. A
+      span is an inline element and so does not respect width and height.
+    </p>
+
+    <nav>
+      <ul class="links-list">
+        <li><a href="">Link one</a></li>
+        <li><a href="">Link two</a></li>
+        <li><a href="">Link three</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
