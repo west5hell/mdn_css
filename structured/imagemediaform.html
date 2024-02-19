@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images, media, and form elements</title>
+
+    <style>
+      .box {
+        border: 2px solid black;
+        width: 320px;
+        height: 200px;
+        margin: 20px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .myform {
+        border: 2px solid black;
+        padding: 5px;
+      }
+
+      .myform input[type="search"] {
+        padding: 10px;
+        font-size: inherit;
+      }
+
+      .myform input[type="submit"] {
+        padding: 10px;
+        font-size: inherit;
+        background-color: rebeccapurple;
+        color: white;
+        border: 0;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="balloons.jpg" alt="balloons" />
+    </div>
+
+    <form method="post" action="" class="myform">
+      <div>
+        <label for="fldSearch">Keywords</label>
+        <input
+          type="search"
+          id="fldSearch"
+          name="keywords"
+          placeholder="Search text"
+        />
+        <input type="submit" name="btnSubmit" value="Search" />
+      </div>
+    </form>
+  </body>
+</html>
